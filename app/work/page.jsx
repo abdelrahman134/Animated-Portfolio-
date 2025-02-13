@@ -12,38 +12,81 @@ import WorkSliderBtn from "@/components/WorkSliderBtn"
 const projects = [
   {
     num: "01",
-    title: "React eCommerce",
-    description:
-      "A fully functional eCommerce application built with React, Redux, and Firebase. Features include user authentication, product management, and a dynamic shopping cart.",
-    category: "Frontend",
-    image: "/e1.png",
-    github: "https://github.com/abdelrahman134/React-Ecommerce/tree/main",
-    live: "",
-    stack: [
-      { name: "React" },
-      { name: "Redux" },
-      { name: "Tailwind CSS" },
-      { name: "Firebase" },
-    ],
-  },
-  {
-    num: "02",
     title: "Next.js Thread Social Media Application",
     description:
       "A modern social media platform inspired by Threads, built using Next.js, TypeScript, and Prisma. Supports real-time posts, likes, and user authentication.",
     category: "Full Stack",
     image: "/thread.png",
     live: "https://thread-social-media-application.vercel.app/",
-    github: "",
+    github: "https://github.com/abdelrahman134/Thread-Social-Media-Application",
+    stack: [{ name: "Next.js" }, { name: "TypeScript" }, { name: "MongoDB" }],
+  },
+  {
+    num: "02",
+    title: "Next.js Dashboard",
+    description:
+      "An interactive admin dashboard built using Next.js and Tailwind CSS, featuring dynamic charts, user management, and analytics integration.",
+    category: "Full stack",
+    image: "/dash.png",
+    live: "https://next-dashboard-murex-omega.vercel.app/",
+    github: "https://github.com/abdelrahman134/next-dashboard",
     stack: [
       { name: "Next.js" },
-      { name: "TypeScript" },
-
+      { name: "Tailwind CSS" },
+      { name: "Chart.js" },
       { name: "MongoDB" },
     ],
   },
   {
     num: "03",
+    title: "Landing page",
+    description:
+      "A sleek and responsive landing page built with Next.js, Tailwind CSS, and Material UI. Designed to showcase products or services with modern UI components.",
+    category: "Frontend",
+    image: "/landing.png",
+    live: "https://landing-page-rho-nine-50.vercel.app/",
+    github: "https://github.com/abdelrahman134/landing-page",
+    stack: [
+      { name: "Next.js" },
+      { name: "Tailwind CSS" },
+      { name: "Material Ui" },
+    ],
+  },
+  {
+    num: "04",
+    title: "Animated portfolio",
+    description:
+      "A visually appealing portfolio website built with Next.js, Tailwind CSS, and Framer Motion. Features smooth animations and interactive elements for an engaging user experience.",
+    category: "Frontend",
+    image: "/next-port.png",
+    live: "https://vercel.com/abdelrahman134s-projects/next-portfolio",
+    github: "https://github.com/abdelrahman134/next-portfolio",
+    stack: [
+      { name: "Next.js" },
+      { name: "Tailwind CSS" },
+      { name: "framer-motion" },
+    ],
+  },
+  {
+    num: "05",
+    title: "Coupon store",
+    description:
+      "A full-stack coupon store application built with React, Material UI, and Node.js. Allows users to browse, save, and redeem discount coupons with a seamless UI.",
+    category: "Full stack",
+    image: "/q2.png",
+    live: "",
+    github: "https://github.com/abdelrahman134/coupon",
+    stack: [
+      { name: "React.js" },
+      { name: "Material Ui" },
+      { name: "Node js" },
+      { name: "Express js" },
+      { name: "MongoDB" },
+    ],
+  },
+
+  {
+    num: "06",
     title: "React YouTube Clone",
     description:
       "A YouTube-inspired video streaming platform built with React and Material UI, featuring video search, categories, and responsive design.",
@@ -58,19 +101,19 @@ const projects = [
     ],
   },
   {
-    num: "04",
-    title: "Next.js Dashboard",
+    num: "07",
+    title: "React eCommerce",
     description:
-      "An interactive admin dashboard built using Next.js and Tailwind CSS, featuring dynamic charts, user management, and analytics integration.",
+      "A fully functional eCommerce application built with React, Redux, and Firebase. Features include user authentication, product management, and a dynamic shopping cart.",
     category: "Full stack",
-    image: "/dash.png",
-    live: "https://next-dashboard-murex-omega.vercel.app/",
-    github: "",
+    image: "/e1.png",
+    github: "https://github.com/abdelrahman134/React-Ecommerce/tree/main",
+    live: "",
     stack: [
-      { name: "Next.js" },
+      { name: "React" },
+      { name: "Redux" },
       { name: "Tailwind CSS" },
-      { name: "Chart.js" },
-      { name: "MongoDB" },
+      { name: "Firebase" },
     ],
   },
 ];
@@ -149,11 +192,11 @@ export default function Work() {
               className="xl:h-[520px] mb-12"
               onSlideChange={handleSlideChange}
             >
-              {projects.map((preject, index) => (
+              {projects.map((project, index) => (
                 <SwiperSlide key={index}>
                   <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
                     <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
-                    <div className="relativw w-full h-full">
+                    <div className="relative w-full h-full">
                       <Image
                         src={project.image}
                         fill
